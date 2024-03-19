@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        let produto = {
+            descricao: "notebook",
+            preco: "1800",
+            //objeto literal como atributo
+            detalhes: {
+                fabricante: "abc",
+                modelo: "xyz"
+            },
+
+            detales(){
+                console.log(`${descricao} por ${preco}.`)
+            }
+        }
+        
+        let { descricao: d, preco: p } = produto
+        console.log(d, p)
+        
+        let { fabricante: f, modelo: m } = produto.detalhes
+        console.log(f, m)
+
+        let { detalhes: { fabricante, modelo} } = produto
+        console.log(fabricante, modelo)
+        
+    </script>
+</head>
+
+<body>
+
+    <h1>Destructuring</h1>
+
+</body>
+
+</html>

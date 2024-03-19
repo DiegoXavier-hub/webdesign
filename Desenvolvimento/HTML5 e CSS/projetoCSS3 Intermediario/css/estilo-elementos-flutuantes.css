@@ -1,0 +1,27 @@
+body{
+    background: #ececec;
+}
+
+#overview{
+    width:920px;
+}
+
+.notice{
+    background: #f5f5f5;
+    padding: 5px;
+    width: 280px;
+    float: left;
+    margin: 7px;
+}
+
+.images{
+    background: rgb(255, 255, 255);
+    width: 265px;
+    padding: 5px;
+    float: left;
+    margin: 15px;
+}
+
+.clear{
+    clear:both;
+}

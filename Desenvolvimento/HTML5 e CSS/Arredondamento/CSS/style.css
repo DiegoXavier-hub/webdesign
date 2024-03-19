@@ -1,0 +1,36 @@
+.caixa{
+    width: 400px;
+    background: #dedede url(../images/fundo-arredondamento.png) repeat-y;
+}
+
+.caixa h2{
+    padding: 10px 20px 0 20px;
+    background: url(../images/topo2.png) no-repeat left top;
+}
+
+.caixa p{
+    padding: 0 20px;
+    margin-bottom: 0px;
+}
+
+.caixa .last{
+    background: url(../images/baixo2.png) no-repeat left bottom;
+    width: 400px;
+    height: 24px;
+}
+
+/*
+.caixa{
+    width: 400px;
+    background: #dedede url(../images/topo2.png) no-repeat left top;
+}
+
+.caixa h2{
+    padding: 10px 20px 0 20px;
+}
+
+.caixa p{
+    background: url(../images/baixo2.png) no-repeat left bottom;
+    padding: 0 20px 20px 20px;
+}
+*/

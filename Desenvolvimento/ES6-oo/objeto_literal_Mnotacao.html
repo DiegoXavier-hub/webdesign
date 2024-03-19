@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        let exibirResumo = () =>{
+            let nome = document.getElementById("nome").value
+            let idade = document.getElementById("idade").value
+            let sexo = document.getElementById("sexo").value
+            let profissao = document.getElementById("profissao").value
+            //objeto
+            let form = {
+                nome,
+                idade,
+                sexo,
+                profissao,
+                
+                exibirResumo(){
+                    return `${nome} tem ${idade} anos, do sexo ${sexo} e é ${profissao}`
+                }
+            }
+
+            console.dir(form.exibirResumo())
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Objetos Literais - Melhorias na notação</h1> <br>
+
+    <label for="nome">nome: </label><br>
+    <input type="text" name="" id="nome"><br><br>
+
+    <label for="idade">idade: </label><br>
+    <input type="text" name="" id="idade"><br><br>
+
+    <label for="sexo">sexo: </label><br>
+    <input type="text" name="" id="sexo"><br><br>
+
+    <label for="profissao">profissão: </label><br>
+    <input type="text" name="" id="profissao"><br><br>
+
+    <input type="button" value="Verificar" onclick="exibirResumo()">
+
+</body>
+
+</html>

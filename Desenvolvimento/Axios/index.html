@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="content">
+        <!-- Axios CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <style>
+            html{
+                background-color: rgb(64, 64, 64);
+                font-family: 'Courier New', Courier, monospace;
+            }
+            
+            body{
+                display: flex;
+                align-items: flex-start;
+                justify-content:flex-start;
+                flex-direction: column;
+            }
+
+            #renderResults{
+                min-height: 30vh;
+            }
+
+            #botoes{
+                display: flex;
+                align-items: center;
+                justify-content:space-evenly;
+                flex-direction: row;
+                width: 40%;
+            }
+            
+            button{
+                background-color: rgb(106, 106, 106);
+                padding: 10px;
+                color: white;
+                font-weight: bold;
+                width: 200px;
+                height: 40px;
+            }
+
+            button:hover{
+                font-size: 15px;
+            }
+
+        </style>
+
+        <title>Consumindo API com Axios</title>
+
+    </head>
+    <body>
+
+        <div id="renderResults">
+        </div>
+        <div id="botoes">
+            <button id="newUser">Cadastrar Usuário</button>
+            <button id="updateUser">Atualizar Usuário</button>
+            <button id="deleteUser">Deletar Usuário</button>
+        </div>
+        
+    </body>
+
+    <script src="./script.js"></script>
+</html>

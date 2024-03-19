@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+
+
+
+  </body>
+
+  <script>
+
+    var listaPessoas = Array()
+
+    var listaNomes = Array('Matheus', 'Diego', 'Hugo', 'Lilian')
+    var listaCPF = Array('416.195.162-06', '131.680.266-38', '476.105.735-12', '164.253.925-42')
+
+    listaPessoas['Nomes'] = listaNomes
+    listaPessoas['CPF'] = listaCPF
+
+    for(var index = 0; index <= listaNomes.length - 1; index++)
+    {
+      document.write('Nome: ' + listaPessoas['Nomes'][index] + '<br>CPF: ' + listaPessoas['CPF'][index] + '<br><hr>')
+    }
+
+    console.log(listaPessoas)
+  </script>
+</html>

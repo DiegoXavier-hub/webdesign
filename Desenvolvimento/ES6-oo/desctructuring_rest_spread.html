@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        //Array
+        let arr = [10, 20, 30, 40]
+
+        let[ a, ...resto] = arr
+
+        console.log(resto)
+
+        //Objeto
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40
+        }
+
+        let { a: x, ...z} = obj
+        console.log(z)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Destructuring</h1>
+
+</body>
+
+</html>

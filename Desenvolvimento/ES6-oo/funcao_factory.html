@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        
+
+
+
+        let Bicicleta1 = {
+            cor: "Branca",
+            marcha: "Única",
+            aro: 12,
+
+            pedalar(){
+                console.log("pedalando")
+            }
+        }
+
+        console.log(Bicicleta1)
+
+
+
+
+        let BicicletaFactory = (cor, marcha, aro) =>{
+            return{
+                cor,
+                marcha,
+                aro,
+
+                pedalar(){
+                    console.log("pedalando")
+                }
+            }
+        }
+
+        let Bicicleta2 = BicicletaFactory("Branca", "Única", 12)
+
+        console.log(Bicicleta2)
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Função Factory</h1>
+
+</body>
+
+</html>

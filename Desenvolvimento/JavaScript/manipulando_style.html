@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+      #divBorder
+      {
+        width: 766px;
+        height: 35px;
+        border: 5px solid black;
+        padding: 15px;
+      }
+      button{
+        width: 150px;
+        height: 35px;
+        border-radius: 5px;
+      }
+
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2>Manipulando estilo</h2>
+
+    <br><br>
+
+    <div id="divBorder">
+      
+      <button onclick="mudaCor('black')">Preto</button>
+  
+      <button onclick="mudaCor('red')">Vermelho</button>
+      
+      <button onclick="mudaCor('green')">Verde</button>
+      
+      <button onclick="mudaCor('blue')">Azul</button>
+  
+      <button onclick="remover()">Remover Borda</button>
+
+  </body>
+
+  <script>
+
+    function mudaCor(color)
+    {
+      document.getElementById('divBorder').style.borderColor = color
+    }
+    function remover()
+    {
+      document.getElementById('divBorder').style.borderColor = 'rgba(0, 0, 0, 0)'
+    }
+  </script>
+</html>

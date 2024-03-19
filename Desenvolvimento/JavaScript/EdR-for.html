@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+
+    <input type="text" id="txt" placeholder="Text">
+    <input type="number" id="number" placeholder="Number">
+    <button onclick="printFor()">Print</button>
+    <br><br>
+
+  </body>
+
+  <script>
+
+    function printFor(){
+      var text = document.getElementById("txt").value
+      var index = document.getElementById("number").value
+
+      for(i=1; i<=index; i++){
+        document.write(i +": " + text + "<br>")
+      }
+    }
+
+  </script>
+
+</html>

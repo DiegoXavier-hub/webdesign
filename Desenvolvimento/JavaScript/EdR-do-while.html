@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+
+    <input type="text" id="txt" placeholder="Text">
+    <input type="number" id="number" placeholder="Number">
+    <button onclick="printDoWhile()">Print</button>
+    <br><br>
+
+  </body>
+
+  <script>
+
+    function printDoWhile(){
+
+      var text = document.getElementById("txt").value
+      var index = document.getElementById("number").value
+      
+      var numb = 1
+      
+      do{
+        document.write(numb +": " + text + "<br>")
+        index--
+        numb++
+      }
+      while (1 <= index)
+    }
+
+  </script>
+
+</html>

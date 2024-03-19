@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+
+
+
+  </body>
+
+  <script>
+
+    var listaPessoas = ['Diego', 'Beatriz', 'José', 'Matheus']
+
+    function pesquisaArray(nome)
+    {
+      var indexName = listaPessoas.indexOf(nome)
+      indexName < 0 ? console.log('O valor ' + nome + ' não existe no Array') : console.log('O index de ' + nome + ' é: ' + indexName)
+    }
+
+    pesquisaArray('Diego')
+    pesquisaArray('Beatriz')
+    pesquisaArray('Ícaro')
+
+  </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+
+  </body>
+
+  <script>
+
+    var listaPessoas = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+    var listaSalarios = [1200, 1500, 1200, 3000, 2000]
+
+    var listaFuncionarios = [listaPessoas, listaSalarios]
+
+    var callback = function(valor, indice, array){
+      console.log("Funcionário: " + listaFuncionarios[0][indice] + " tem o salário: " + listaFuncionarios[1][indice])
+    }
+
+    listaPessoas.forEach(callback)
+
+  </script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+      .estilo1
+      {
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
+
+      .estilo2
+      {
+        background-color: grey;
+        color: #a692ff;
+      }
+
+      #mensagem{
+        width: 300px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="mensagem" class="estilo1">Modificando a classe do elemento</div>
+    <hr>
+    <button type="button" onclick="modificaClasse()">Aplicar Classe 1</button>
+    <button type="button" onclick="modificaClasse2()">Aplicar Classe 2</button>
+
+  </body>
+
+  <script>
+
+    function modificaClasse()
+    {
+      document.getElementById('mensagem').className = 'estilo1'
+    }
+    function modificaClasse2()
+    {
+      document.getElementById('mensagem').className = 'estilo2'
+    }
+
+  </script>
+</html>

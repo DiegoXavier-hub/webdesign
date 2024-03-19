@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        class Cadeiras{
+            constructor(id, qntdPernas, giratoria, cor){
+                this.id = id
+                this.qntdPernas = qntdPernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            girarCadeira(qntd){
+                if(this.giratoria === true){
+                    for(let i = 1; i <= qntd; i++){
+                        console.log(`A cadeira ${this.id} girou ${i} ${i==1 ? "vez" : "vezes"}`)
+                    }
+                    return `A cadeira ${this.id} girou ${qntd} vez(es)`
+                } else {
+                    console.log(`A cadeira ${this.id} não é giratória`)
+                    return `A cadeira ${this.id} não é giratória`
+                }
+            }
+        }
+
+        //cria array de cadeiras
+        let cadeiras = Array()
+
+        //arrow function que cria uma nova cadeira e gera o id automaticamente
+        //de acordo com a posição da cadeira no array
+        const novaCadeira = (qntdPernas, giratoria, cor) => {
+            cadeiras.push(new Cadeiras(cadeiras.length, qntdPernas, giratoria, cor))
+        }
+
+        //cria cadeiras com a função
+        novaCadeira(4, true, "azul")
+        novaCadeira(4, false, "rosa")
+        novaCadeira(4, true, "vermelha")
+
+        console.log(cadeiras)
+
+        cadeiras[0].girarCadeira(2)
+        cadeiras[1].girarCadeira(1)
+        console.log(cadeiras[2].cor)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Abstração</h1>
+
+</body>
+
+</html>

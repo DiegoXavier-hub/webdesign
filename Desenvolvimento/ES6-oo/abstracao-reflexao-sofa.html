@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        //exercicio
+        class Sofa{
+            constructor(id, numeroAssentos,numeroAssentosDisponiveis ,cor, reclinavel, estado, preco){
+                this.id = id
+                this.numeroAssentos = numeroAssentos
+                this.numeroAssentosDisponiveis = numeroAssentosDisponiveis
+                this.estado = estado
+                this.cor = cor
+                this.reclinavel = reclinavel
+                this.preco = preco
+            }
+
+            sentar(qntdPessoas){
+                qntdPessoas <= this.numeroAssentosDisponiveis ? this.numeroAssentosDisponiveis -= qntdPessoas : console.log(`Não há lugares disponíveis no sofá ${this.id}`)
+                console.log(`${qntdPessoas} sentaram no sofá, há ${this.numeroAssentosDisponiveis} assentos disponíveis`)
+            }
+
+            reclinarSofa(){
+
+                if(Boolean(this.reclinavel) == true && this.estado != "reclinado"){
+                    this.estado = "reclinado"
+                } else if(Boolean(this.reclinavel) == true && this.estado === "reclinado"){
+                    this.estado = "não reclinado"
+                } else if(Boolean(this.reclinavel) == false){
+                    console.log(`O sofá ${this.id} não é reclinável`)
+                    return `O sofá ${this.id} não é reclinável`
+                } else {
+                    console.log(`Houve um erro`)
+                    return `Houve um erro`
+                }
+            }
+
+            alterarPreco(newPrice){
+                this.preco = newPrice
+                console.log(`preço alterado com sucesso`)
+            }
+        }
+
+        let sofas = Array()
+
+        let novoSofa = () => {
+            sofas.push(new Sofa(
+            sofas.length,
+            parseInt(document.getElementById("numeroAssentos").value),
+            parseInt(document.getElementById("numeroAssentosDisponiveis").value),
+            document.getElementById("cor").value,
+            Boolean(document.getElementById("reclinavel").value),
+            document.getElementById("estado").value,
+            parseFloat(document.getElementById("preco").value)
+            ))
+            
+            console.log(sofas)
+        }
+
+        let reclinar = () => {
+            sofas[document.getElementById("reclinar").value].reclinarSofa()
+            console.log(sofas)
+        }
+
+        let sentarSofa = () => {
+            sofas[document.getElementById("sentarID").value].sentar(document.getElementById("sentarPessoas").value)
+            console.log(sofas)
+        }
+
+        let alteraPreco = () => {
+            sofas[document.getElementById("alterarPrecoID").value].alterarPreco(parseFloat(document.getElementById("alterarPrecoValor").value))
+            console.log(sofas)
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <label for="numeroAssentos">Número de Assentos: </label> <br>
+    <input type="text" name="" id="numeroAssentos"> <br><br>
+    
+    <label for="numeroAssentosDisponiveis">Número de Assentos disponíveis: </label> <br>
+    <input type="text" name="" id="numeroAssentosDisponiveis"><br><br>
+
+    <label for="cor">Cor: </label> <br>
+    <input type="text" name="" id="cor"><br><br>
+
+    <label for="reclinavel">Reclinavel: </label> <br>
+    <input type="text" name="" id="reclinavel"><br><br>
+
+    <label for="estado">Estado: </label> <br>
+    <input type="text" name="" id="estado"><br><br>
+
+    <label for="preco">Preço: </label> <br>
+    <input type="text" name="" id="preco"><br><br>
+
+
+    <input type="button" value="Cadastrar" onclick="novoSofa()"> <br><br><br>
+
+    <label for="reclinar">(reclinar) ID: </label> <br>
+    <input type="text" name="" id="reclinar"><br><br>
+    <input type="button" value="Reclinar" onclick="reclinar()"> <br><br><br>
+
+
+    <label for="sentarPessoas">número de pessoas: </label> <br>
+    <input type="text" name="" id="sentarPessoas"><br><br>
+    <label for="sentarID">(sentar) ID: </label> <br>
+    <input type="text" name="" id="sentarID"><br><br>
+    <input type="button" value="Ocupar Assentos" onclick="sentarSofa()"> <br><br><br>
+    
+    <label for="alterarPrecoValor">Novo Valor: </label> <br>
+    <input type="text" name="" id="alterarPrecoValor"><br><br>
+    <label for="alterarPrecoID">(Alterar Preço) ID: </label> <br>
+    <input type="text" name="" id="alterarPrecoID"><br><br>
+    <input type="button" value="Alterar Preço" onclick="alteraPreco()"> <br><br><br>
+
+</body>
+
+</html>

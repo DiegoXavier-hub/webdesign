@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        let a1 = {
+            cor: "Branco",
+            modelo: "Airbus a380",
+
+            levantarVoo: function(){
+                console.log("Levantar voo")
+            }
+        }
+
+        let AviaoF = function(){
+            this.cor = "Azul",
+            this.modelo = "Boeing 787",
+
+            levantarVoo = () => {
+                console.log("Levantar voo")
+            }
+        }
+
+        let a2 = new AviaoF()
+
+        //a1 baseado no objeto literal e a2 baseado na construção de um objeto cujo modelo é uma função contrutora
+
+        class AviaoC {
+            constructor(){
+                this.cor = "Vermelho",
+                this.modelo = "Embraer E-Jets"
+            }
+        }
+
+        let a3 = new AviaoC()
+
+        //a3 é baseado em uma classe
+
+        console.table(a1)
+        console.table(a2)
+        console.table(a3)
+    
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Prototype</h1>
+
+</body>
+
+</html>

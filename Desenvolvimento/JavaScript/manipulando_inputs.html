@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+  <body>
+
+    <input type="" placeholder="Digite um caractere" onkeyup="distribuiCaractere()" id="entrada">
+    <br><br>
+    <span>Números</span>
+    <input type="text" disabled id="numeros">
+
+    <span>Letras</span>
+    <input type="text" disabled id="letras">
+
+    <button onclick="limpar()">Limpar Campos</button>
+
+  </body>
+
+  <script>
+
+    function distribuiCaractere()
+    {
+      //Seleciona o valor digitado
+      var caractere = document.getElementById('entrada').value
+      //limpa campo de digitação
+      document.getElementById('entrada').value = ''
+      //Limpa espaçoes em branco nas extremidades da string
+      caractere.trim()
+
+      if(!(isNaN(caractere)))
+      {
+        //Adiciona o caractere ao campo de números
+        document.getElementById('numeros').value += caractere.toString()
+      }
+      else
+      {
+        //Adiciona o caractere ao campo letras
+        document.getElementById('letras').value += caractere.toString()
+      }
+    }
+
+    function limpar()
+  {
+    document.getElementById('numeros').value = ''
+    document.getElementById('letras').value  = ''
+  }
+
+  </script>
+</html>

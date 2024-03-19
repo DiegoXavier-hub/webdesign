@@ -1,0 +1,80 @@
+main{
+    height: 150vh;
+}
+
+[data-text]{
+    max-width: 334px;
+    height: 40px;
+    font-size: 35px;
+}
+
+.textAnimation{
+    background-color: red;
+    position: relative;
+    top: -40px;
+    transform: scaleX(0);
+}
+
+/*Animação da esqueda para direita*/
+
+.animateInLeftRight{
+    animation: animeIn .8s ease-in-out forwards;
+}
+
+.animateOutLeftRight{
+    animation: animeOut .7s ease-out forwards;
+}
+
+@keyframes animeIn {
+    0%{
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+    100%{
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes animeOut {
+    0%{
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+    100%{
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+/*Animação da direita para esquerda*/
+
+.animateInRightLeft{
+    animation: animeInR .8s ease-in-out forwards;
+}
+
+.animateOutRightLeft{
+    animation: animeOutR .7s ease-out forwards;
+}
+
+@keyframes animeInR {
+    0%{
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+    100%{
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes animeOutR {
+    0%{
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    100%{
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+}

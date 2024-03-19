@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        let soma = (...param) =>{
+
+            let resultado = 0
+            param.forEach(i => resultado += i)
+            
+            return resultado
+        }
+
+        console.log(soma(1, 2, 3, 4, 5))
+
+        let multiplicador = (m, ...p) =>{
+
+            for(let i = 0; i < p.length; i++){
+                p[i] *= m 
+            }
+
+            let resultado = 0
+            p.forEach(i => resultado += m * i)
+
+            console.log(p)
+            console.log(resultado)
+            return resultado
+        }
+
+        multiplicador(2, 1, 2, 3, 4, 5)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Rest</h1>
+
+</body>
+
+</html>

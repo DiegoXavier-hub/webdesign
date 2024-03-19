@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+    </script>
+    <style>
+      p>input:focus{
+    border-color: rgb(21, 4, 98) !important;
+  }
+  p>input:invalid{
+      border-color: red;
+  }
+  p>input:valid{
+      border-color: green;
+  }
+  p>input:invalid + span::before{
+      border-color: red;
+      content: "✖";
+      color: red;
+      margin: 2px;
+  }
+  p>input:valid + span::before{
+      border-color: green;
+      content: "✔";
+      color: green;
+  }
+    </style>
+  </head>
+
+  <body>
+
+    
+    <p><label><span>Telefone: </span><br></label><input type="text" name="telefone" value="" size="50" required /> <span><span class="verificador"></span> </p>
+
+  </body>
+</html>

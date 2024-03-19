@@ -1,0 +1,103 @@
+$primary-color: #ac694e;
+$second-color: #f2e1da;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700&display=swap');
+@import '_mixin.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+
+    body{
+        @include flexBox(column, flex-start, center);
+        overflow: hidden;
+        background-color: $second-color;
+        font-family: 'Montserrat', 'sans-serif';
+        color: $primary-color;
+
+        header{ 
+            width: 100%;
+            height: 10vh;
+            @include flexBox(row, space-between, center);
+
+            section{
+                margin-left: 25px;
+                font-size: 3rem;
+                cursor: default;
+            }
+
+            ul{
+                width: 50%;
+                @include flexBox(row, space-evenly, center);
+
+                li{
+                    list-style: none;
+                    font-size: 1.5rem;
+                    
+                    &:nth-child(1){
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+
+                    a{
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        main{
+            height: 90vh;
+            width: 100%;
+            @include flexBox(row, center, center); 
+
+            @for $i from 1 through 4 {
+                .for-#{$i}{
+                    @include estruturaRepeticao(100px);
+                }
+            }
+
+            $indexWhile: 1;
+
+            @while $indexWhile <= 4{
+                .while-#{$indexWhile}{
+                    @include estruturaRepeticao(100px);
+                }
+                $indexWhile: $indexWhile + 1;
+            }
+
+            $indexEach: 1;
+            $lista: red, green, blue, yellow;
+            @each $color in $lista {
+                .each-#{$indexEach}:hover{
+                    background-color: $color;
+                }
+                $indexEach: $indexEach + 1;
+            }
+        }
+    }
+}
+
+/*percentage($content/$content), mix(cor, cor, 50%); darken(cor, 15%); e lighten(cor, 15%)*/
+/*Multiplas diretivas (Herança)*/
+
+.classe1{
+    color: vermelho;
+}
+.classe2{
+    background: #000;
+}
+
+.vermelho{
+    @extend .classe1;
+    @extend .classe2;
+}

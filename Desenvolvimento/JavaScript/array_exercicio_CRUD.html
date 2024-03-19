@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+
+      *::selection{
+        background-color: #ff0043;
+        color: #fff;
+      }
+
+      body{
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(110deg, rgba(9,0,29,1) 0%, rgba(105,0,81,1) 100%);
+        font-family: monospace;
+      }
+
+      div{
+        margin-bottom: 10px;
+      }
+      
+      #container{
+        width: 400px;
+        height: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid rgba(255, 255, 255, 0.338);
+        border-radius: 10px;
+        margin-top: 100px;
+        color: #fff;
+        font-size: 30px;
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.342) 0%, rgba(255, 255, 255, 0.063) 100%);
+      }
+
+      span{
+        background-image: linear-gradient(90deg, rgb(58, 0, 102) 0%, rgb(139, 0, 30) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .input{
+        display: block;
+        border-radius: 5px;
+        background-color: rgba(60, 43, 59, 0.521);
+        color: rgb(197, 197, 197);
+      }
+      
+      #consulta{
+        width: 350px;
+        height: 30px;
+        margin: 50px 0 20px 0;
+        font-size: 15px;
+        border: none;
+        border-bottom: 1px solid #ff0043;
+        border-radius: 0px;
+        outline: none;
+        caret-color: #ff0043;
+      }
+
+      #mensagem{
+        margin: 20px 0 40px 0;
+        width: 350px;
+        height: 120px;
+        font-size: 15px;
+        text-align: start;
+      }
+
+      button{
+        width: 175px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #ff0043;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.351);
+      }
+
+      button:hover{
+        background-color: #ff225d;
+      }
+
+      #order{
+        margin: 15px 0 10px 0;
+        width: 370px;
+      }
+
+      ::-webkit-scrollbar{
+        width: 20px;
+      }
+      ::-webkit-scrollbar-track{
+        background: #ff0043;
+      }
+
+      ::-webkit-scrollbar-thumb{
+        background-color: #000;
+        border-radius: 30px;
+      }
+      </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <span>Exercício De Arrays</span>
+
+      <input type="text" name="" class="input" id="consulta" required="required" placeholder="Consulta" autocomplete="off">
+      <input class="input" id="mensagem" placeholder="Faça uma consulta" disabled="disabled">
+
+      <div>
+        <button onclick="createElementA()">Adicionar</button>
+        <button onclick="deleteElement()">Remover</button>
+      </div>
+      <div>
+        <button onclick="readElement()">Consulta</button>
+        <button onclick="updateElement()">Atualizar</button>
+      </div>
+      <button onclick="orderElement()" id="order">Ordenar</button>
+      
+    </div>
+
+  </body>
+
+  <script>
+
+    var lista = []
+
+    function createElementA(){
+
+      var objeto = document.getElementById('consulta').value
+      if(objeto.length > 2){
+
+        if(lista.indexOf(objeto) < 0){
+          lista.push(objeto)
+          document.getElementById('consulta').value = ''
+          document.getElementById('mensagem').value = 'Objeto cadastrado com sucesso!'
+        }else{
+          document.getElementById('mensagem').value = 'Este objeto já existe e está no index: ' + (parseInt(lista.indexOf(objeto)) + 1)
+        }
+      } else {
+        document.getElementById('mensagem').value = 'São esperados no mínimo 3 caracteres.'
+      }
+
+      console.log(lista)
+    }
+
+    function deleteElement(){
+      var objeto = document.getElementById('consulta').value
+
+      if(objeto.length > 2){
+
+        indexObjeto = lista.indexOf(objeto)
+  
+        if(indexObjeto >= 0){
+          lista.splice(indexObjeto, 1)
+          document.getElementById('consulta').value = ''
+          document.getElementById('mensagem').value = 'Objeto removido com sucesso!'
+        }else{
+          document.getElementById('mensagem').value = 'Não há nenhum(a) ' + objeto + ' cadastrado(a)!'
+        }
+  
+        console.log(lista)
+      } else {
+        document.getElementById('mensagem').value = 'São esperados no mínimo 3 caracteres.'
+      }
+    }
+
+    function readElement(){
+      document.getElementById('mensagem').value = ''
+
+      for(index = 0;  index <= lista.length - 1; index++){
+        document.getElementById('mensagem').value += index + 1 + ': ' + lista[index] + " | "
+      }
+
+      console.log(lista)
+    }
+
+    function updateElement(){
+      var objeto = document.getElementById('consulta').value
+      indexObjeto = lista.indexOf(objeto)
+
+      if(objeto.length > 2){
+        if(indexObjeto >= 0){
+          var novoObjeto = prompt("Digite o valor atualizado: ")
+          lista.slice(indexObjeto, 1)
+          lista[indexObjeto] = novoObjeto
+          document.getElementById('mensagem').value = 'Objeto alterado com sucesso!'
+          document.getElementById('consulta').value = ''
+        } else {
+          document.getElementById('mensagem').value = 'Não há nenhum(a) ' + objeto + ' cadastrado(a)!'
+        }
+      }else{
+          document.getElementById('mensagem').value = 'São esperados no mínimo 3 caracteres.'
+      }
+    }
+
+    function orderElement(){
+      lista.sort()
+      document.getElementById('mensagem').value = 'Objetos ordenados com sucesso!'
+    }
+
+  </script>
+</html>

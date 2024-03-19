@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        class Animal{
+            constructor(cor, tamanho){
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir(){
+                return `dormindo...`
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(cor, tamanho, bico){
+                super(cor, tamanho)
+                this.bico = bico
+            }
+
+            voar(){
+                return `voando`
+            }
+        }
+
+        class Avestruz extends Passaro{
+            constructor(cor, tamanho, bico){
+                super(cor, tamanho, bico)
+            }
+
+            enterrarCabeca(){
+                return `Enterrou a cabeça`
+            }
+
+            voar(){
+                return `Não sabe voar`
+            }
+        }
+
+        let avestruz = new Avestruz("preto", 255, "normal")
+
+        console.log(avestruz.voar())
+
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Polimorfismo</h1>
+
+</body>
+
+</html>

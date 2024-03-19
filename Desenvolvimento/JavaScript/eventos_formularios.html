@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+      //onfocus, onblur && onchange
+
+      function colorChange(){
+        document.getElementById('focus').style.backgroundColor = '#ccc';
+      }
+      function colorChange2(){
+        document.getElementById('focus').style.backgroundColor = '#fff';
+      }
+
+      </script>
+  </head>
+
+  <body>
+
+    <input type="text" onfocus="colorChange()" onblur="colorChange2()" id="focus">
+
+    <select onchange="console.log('changed')">
+      <option value="">Selecione</option>
+      <option value="1">opção 1</option>
+      <option value="2">opção 2</option>
+      <option value="3">opção 3</option>
+    </select>
+
+  </body>
+</html>

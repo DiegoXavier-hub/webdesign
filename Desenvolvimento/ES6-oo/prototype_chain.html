@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        Object.prototype.attr4 = "d" //cuidado, dá a todos os objetos da aplicação essa informação
+
+        let animal = {attr1: "a"}
+        let vertebrado = { __proto__: animal, attr2: "b"}
+        let ave = { __proto__: vertebrado, attr3: "c"}
+
+        console.log(ave.attr1, ave.attr2, ave.attr3, ave.attr4)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Prototype - Herança</h1>
+
+</body>
+
+</html>

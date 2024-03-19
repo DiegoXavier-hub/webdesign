@@ -1,0 +1,20 @@
+.conteudo1{
+    border: 1px solid black;
+    background: rgb(255, 79, 15);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+}
+.conteudo2{
+    border: 1px solid black;
+    background: rgb(6, 138, 24);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    z-index: 0;
+    /*z-index define a ordem de sobreposição dos itens
+    quanto maior o index mais a frente fica o elemento*/
+}

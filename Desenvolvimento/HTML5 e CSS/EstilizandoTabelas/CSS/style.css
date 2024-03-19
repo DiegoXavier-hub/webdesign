@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+table{
+    width: 600px;
+    border-collapse: collapse;
+    
+}
+
+h2{
+    margin: 20px;
+    text-align: center;
+}
+
+th, td{
+    padding: 7px;
+}
+
+th{
+    text-transform: uppercase;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #999;
+    text-align: left;
+    font-size: 90%;
+    letter-spacing: 0.1em;
+}
+
+tr.alter{
+    background-color: #efefef;
+}
+
+tr:hover{
+    background-color: #c3e6e5;
+}
+
+.number{
+    text-align: right;
+}

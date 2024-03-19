@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #fff url(../images/fundo.png) repeat-x top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 750px;
+    margin: 0 auto;
+}
+
+#top{
+    height: 150px;
+    padding-top: 25px;
+    background: url(../images/detalhe-topo.png) no-repeat right top;
+}
+
+.logo{
+    width: 152px;
+    height: 66px;
+    background: url(../images/logo.png) no-repeat center;
+    text-indent: -3000px;
+}
+
+/*Barra de Navegação*/
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#top ul{
+    margin-top: 30px;
+    background: #b10333;
+    display: inline-block;
+}
+
+#top ul li{
+    display: inline-block;
+}
+
+#top ul li a{
+    font-size: 0.9em;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../images/divisor.png) no-repeat left center;
+}
+
+#top ul .primeiro a{
+    background: none;
+}
+
+#top ul a:hover{
+    color: #69001d;
+}
+
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.fotos #navegacao a#fotos,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.internacional #navegacao a#internacional
+{
+    color: #fff;
+    background: #bb6a753a;
+    cursor: pointer;
+}
+
+/* Configura Layout de três colunas */
+
+#conteudo{
+    margin-top: 60px;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#lateral{
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    order: 3;
+}
+
+#primario{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+}
+
+#duas-colunas #secundario{
+    width: 555px;
+}
+
+#uma-coluna #secundario{
+    width: 750px;
+}
+
+#secundario{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+}
+
+/* Box */
+.box{
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    padding: 5px 0;
+    background: #f3f3f3 url(../images/fundo-caixa.png) repeat top;
+}
+
+.box h2{
+    font-size: 1.1em;
+    background-color: #294c71;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+
+.box-conteudo{
+    background: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Menus Laterais*/
+
+#lateral ul a{
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+#lateral ul a:hover{
+    font-size: 0.95em;
+    background: #f9f9f9 url(../images/marcador.png) no-repeat left center;
+    padding-left: 20px;
+    color: #a1a1a1;
+}
+
+label{
+    display: block;
+    cursor: pointer;
+}
+
+input{
+    margin-top: 10px;
+    padding: 5px;
+    width: 125px;
+    font-size: 0.9em;
+    background: #fff;
+}
+
+input.submit{
+    width: 80px;
+    color: #fff;
+    background-color: #b10333;
+    border: 2px solid #870529;
+    border-radius: 5px;
+}
+
+/*Formatação das imagens*/
+
+img.imagem-principal{
+    width: 100%;
+    border: 3px solid #dfdfdf;
+}
+
+/* Formatação dos Cabeçalhos */
+
+h3{
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.9em;
+    padding: 3px;
+}
+
+.box .box-conteudo>h3{
+    background: #b10333;
+    color: #fff;
+}
+
+#secundario .box-conteudo>h3{
+    background: #b10333;
+    color: #fff;
+}
+
+/* Lista de Notícias */
+
+.lista-noticias li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 70px;
+}
+
+.lista-noticias li a img{
+    margin: 5px;
+}
+.lista-noticias li a{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    font-size: 0.924em;
+}
+
+.lista-noticias li span p{
+    font-size: 0.896em;
+    color: rgb(0, 0, 0);
+}
+
+.lista-noticias li span h3{
+    margin: 0px;
+    padding: 0px;
+    background: #ccc;
+    color: #3e7ab9;
+}
+
+.lista-noticias li:hover{
+    background: #eee;
+    cursor: pointer;
+}
+
+/* Configura o Rodapé*/
+
+div#container-rodape{
+    line-height: 3em;
+    height: 50px;
+    width: 100%;
+    margin-top:20px;
+    color: #fff;
+    background: #294c71;
+}
+div#container-rodape p{
+    margin-left: 25.5%;
+}

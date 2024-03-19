@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;500&family=Teko:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("../img/back-wall.jpg") rgb(21, 20, 27) no-repeat;
+    color: rgb(231, 231, 231);
+    font-family: 'Mukta', sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+header figure img{
+    width: 55px;
+    margin-top: -10px;
+}
+
+header ul li{
+    font-size: 1.1em;
+    display: inline;
+    text-align: center;
+    margin: 15px;
+}
+
+img.hand{
+    width: 390px;
+    position: absolute;
+    margin-top: 9%;
+    z-index: -5;
+}
+
+div.moeller-corp{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 90px;
+}
+
+span.moeller{
+    text-transform: uppercase;
+    font-size: 170px;
+    letter-spacing: 90px;
+    color: rgb(231, 231, 231);
+    font-family: 'Teko', sans-serif;
+    text-shadow: 1px 1px 40px rgb(3, 0, 8);
+}
+
+span.corp{
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-left: -6%;
+    margin-top: 2%;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div{
+    display: inline;
+    height: 70px;
+}
+
+div.languages{
+    display: flex;
+}
+
+footer img{
+    width: 55px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(231, 231, 231);
+    margin: 5px;
+    height: 100%;
+}
+
+div.languages a{
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+}

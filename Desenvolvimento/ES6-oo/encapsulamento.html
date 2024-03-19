@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+    class Tv{
+        constructor() {
+            this.relacaoCanais = Array(2, 4, 5, 7, 10)
+            this._canalAtivo = 5
+            this.volume = 5
+        }
+
+        get getCanalAtivo(){
+            return this._canalAtivo
+        }
+
+        set setCanalAtivo(canalAtivo){
+            if(this.relacaoCanais.indexOf(canalAtivo) !== -1){
+                this._canalAtivo = canalAtivo
+            }
+        }
+    }
+
+    let tv = new Tv()
+    tv.setCanalAtivo = 10
+    console.log(tv.getCanalAtivo)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Encapsulamento</h1>
+
+</body>
+
+</html>

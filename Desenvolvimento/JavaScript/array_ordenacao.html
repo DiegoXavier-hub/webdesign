@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+
+
+
+  </body>
+
+  <script>
+
+    var listaPessoas = Array()
+
+    var listaNomes = Array('Matheus', 'Diego', 'Hugo', 'Ana')
+    var listaCPF = Array('416.195.162-06', '131.680.266-38', '476.105.735-12', '164.253.925-42')
+
+    listaPessoas['Nomes'] = listaNomes.sort()
+    listaPessoas['CPF'] = listaCPF.sort()
+
+    console.log(listaPessoas)
+
+    var listaNumeros = Array(12, 40, 3, 7, 19, 1)
+
+    console.log(listaNumeros.sort(ordenaNumeros))
+
+    function ordenaNumeros(a, b)
+    {
+      return a - b
+    }
+
+
+  </script>
+</html>

@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f2e1da;
+  font-family: "Montserrat", "sans-serif";
+  color: #ac694e;
+}
+html body header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header section {
+  margin-left: 25px;
+  font-size: 3rem;
+  cursor: default;
+}
+html body header ul {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+html body header ul li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+html body header ul li:nth-child(1) {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+html body header ul li:hover {
+  transform: scale(1.1);
+}
+html body header ul li a {
+  color: #ac694e;
+  text-decoration: none;
+}
+html body main {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+html body main .for-1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .for-2 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .for-3 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .for-4 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .while-1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .while-2 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .while-3 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .while-4 {
+  width: 100px;
+  height: 100px;
+  background-color: #ac694e;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 4rem;
+  color: #f2e1da;
+}
+html body main .each-1:hover {
+  background-color: red;
+}
+html body main .each-2:hover {
+  background-color: green;
+}
+html body main .each-3:hover {
+  background-color: blue;
+}
+html body main .each-4:hover {
+  background-color: yellow;
+}
+
+/*percentage($content/$content), mix(cor, cor, 50%); darken(cor, 15%); e lighten(cor, 15%)*/
+/*Multiplas diretivas (Herança)*/
+.classe1, .vermelho {
+  color: vermelho;
+}
+
+.classe2, .vermelho {
+  background: #000;
+}/*# sourceMappingURL=style.css.map */

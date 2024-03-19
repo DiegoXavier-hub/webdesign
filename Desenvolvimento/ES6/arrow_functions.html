@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    
+
+    <script>
+
+        
+        let quadrado = function(x){
+            return x*x
+        }
+        
+        //Se parametros == 1, omitir ().
+        // Se houver apenas um retorno, omitir {} 
+        let quadradoArrow = x => x*x
+
+        
+        let expoente = (numero, expoente) => {
+            let base = numero
+            let retorno
+
+            if(expoente < 0){
+                expoente *= -1
+                numero = 1/numero
+                let base = numero
+
+                for (let index = 1; index < expoente; index++) {
+                    numero = numero * base;
+                }
+
+                retorno = numero
+            } else if(expoente == 0){
+                retorno = 1
+            }
+            else{
+                for (let index = 1; index < expoente; index++) {
+                    numero = numero * base;
+                }
+                retorno = numero
+            }
+            return retorno.toFixed(4)
+        }
+
+        console.log(`
+        Quadrado de um número: ${quadradoArrow(3)}
+        Expoente Geral: ${expoente(5, -4)}
+        `)
+
+        let parOuImpar = numero => numero % 2 === 0 ? "par" : "impar"
+
+        document.write(parOuImpar(2))
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        class Animal{
+            constructor(cor, tamanho){
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir(){
+                return `dormindo...`
+            }
+        }
+
+        class Cachorro extends Animal{
+            constructor(cor, tamanho, orelhas){
+                super(cor, tamanho)
+                this.orelhas = orelhas
+            }
+
+            correr(){
+                return `correndo` 
+            }
+
+            rosnar(){
+                return `rosnando`
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(cor, tamanho, bico){
+                super(cor, tamanho)
+                this.bico = bico
+            }
+
+            voar(){
+                return `voando`
+            }
+        }
+
+        let Teddy = new Cachorro("branco", 25, "grandes e caídas")
+
+        console.log(Teddy)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Herança</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+section{
+    display: block;
+    padding: 15px;
+    border: 1px dotted rgb(124, 24, 116);
+}
+
+label{
+    margin-right: 10px;
+    display: block;
+}
+
+.form{
+    width: 25%;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <style>
+      body{
+        background-color: black;
+      }
+      div{
+        width: 50px;
+        height: 50px;
+        background-color: #ff0043;
+      }
+      p{
+        color: rgb(0, 0, 0);
+        font-size: 40px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+  </body>
+
+  <script>
+
+    const altura = window.screen.height
+    const largura = window.screen.width
+    let posX
+    let posY 
+    let pontosPlayer = 0
+    let tempo = 1650
+
+    document.write('<div id="mosquito" onclick="Pontos()"><p id="pts">0</p></div>')
+
+    function GeraPosicao(){
+      posX = Math.random() * (largura - 66) + 0
+      posY = Math.random() * (altura - 203) + 0
+    }
+
+    function Pontos(){
+      GeraPosicao()
+      AtribuiPosicao()
+    }
+
+    function win(){
+      if(pontosPlayer === 10){
+        window.location.href = "http://127.0.0.1:5500/Desenvolvimento/JavaScript/index.html"
+      }
+    }
+    
+    const AtribuiPosicao = function(){
+      GeraPosicao()
+      document.getElementById("mosquito").style.marginLeft = posX + "px"
+      document.getElementById("mosquito").style.marginTop = posY + "px"
+      pontosPlayer += 1
+      document.getElementById("pts").innerHTML = pontosPlayer
+      win()
+    }
+
+    const AtribuiPosicaoPontos = function(){
+      GeraPosicao()
+      document.getElementById("mosquito").style.marginLeft = posX + "px"
+      document.getElementById("mosquito").style.marginTop = posY + "px"
+      pontosPlayer -= 1
+      document.getElementById("pts").innerHTML = pontosPlayer
+      win()
+    }
+    
+    setInterval(
+      AtribuiPosicaoPontos,
+      tempo
+    )
+
+
+
+  </script>
+
+</html>

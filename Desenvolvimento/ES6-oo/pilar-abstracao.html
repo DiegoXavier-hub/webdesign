@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        //class - modelo da entidade/objeto
+        class ContaBancaria{
+
+            //  ATRIBUTOS:
+            /*  é necessário construir os atributos (agencia, numeroConta, saldo, limite) 
+                dentro do objeto com o método constructor(){}    */
+
+            constructor(){
+                this.agencia = "0001"
+                this.numeroConta = "8361473"
+                this.saldo = 3000
+                this.limite = 6000
+            }
+            
+            depositar(valor){
+                if(parseInt(valor)>0) {
+                    this.saldo += parseInt(valor)
+                    return `O valor R$ ${valor} foi depositado com sucesso, seu novo saldo é R$ ${this.saldo}`
+                } else {
+                    return `Erro: O valor depositado deve ser positivo`
+                }
+            }
+
+            sacar(valor){
+                if(parseInt(valor)>0) {
+                    this.saldo -= parseInt(valor)
+                    return `O valor R$ ${valor} foi sacado com sucesso, seu novo saldo R$ é ${this.saldo}`
+                } else {
+                    return `Erro: O valor sacado deve ser positivo`
+                }
+            }
+
+            consultarSaldo(){
+                return `O seu saldo atual é R$ ${this.saldo}`
+            }
+        }
+        
+        let conta01 = new ContaBancaria()
+
+        console.log(conta01.consultarSaldo())
+
+        console.log(conta01.depositar(-1000))
+        console.log(conta01.sacar(500))
+
+        console.log(conta01.consultarSaldo())
+    
+    </script>
+</head>
+
+<body>
+
+    <h1>OO - Abstração</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        let assinatura = {
+            idCliente: "1000",
+            descricao: "",
+
+            status(){
+                console.log(this.descricao)
+            }
+        }
+
+        let x = assinatura
+
+        assinatura.descricao = "Com acesso à internet"
+
+        assinatura.status()
+        x.status()
+
+        x.descricao = "Sem acesso à internet"
+
+        assinatura.status()
+        x.status()
+
+        //As variáveis x e assinatura se referem ao mesmo objeto literal
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Objetos Literais - Objetos únicos</h1>
+
+</body>
+
+</html>

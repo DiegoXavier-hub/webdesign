@@ -1,0 +1,53 @@
+body{
+    background: #007fc7;
+}
+
+#container{
+    background: #FFF;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.relative{
+    border: 1px solid black;
+    position: relative; 
+    top: 20px; /*top, right, bottom e left*/
+    /*
+    O posicionamento relativo tem seu alinhamento baseado na posição inicial do elemento;
+
+    Propriedade relative se baseia na posição inicial dentro do fluxo normal
+    */
+}
+
+.absolute{
+    border: 1px solid black;
+    background: #f2f2f2;
+    position: absolute; 
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    /*
+    O posicionamento absoluto permite que seja definida uma caixa que é removida do fluxo normal do documento
+    e você consegue alinhar essa caixa baseado no seu conteiner que tenha uma posição;
+
+    O alinhamento absolute é baseado no conteiner desde que o conteiner não esteja no fluxo normal (static),
+    caso este seja o caso, ele será posicionado baseado no body, e acompanha a rolagem
+    */
+}
+
+.fixed{
+    border: 1px solid black;
+    background: #f2f2f2;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 0px;
+    width: 100%;
+    /*
+    O posicionamento fixo é alinhado baseado na viweport
+
+    O posicionamento fixed fica fixo em relação à janela do navegador, não acompanha a rolagem
+    */
+}

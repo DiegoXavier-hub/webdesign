@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <script>
+
+        //context spread
+
+        //string
+        let tituloArtigo = "spread"
+
+        console.table(tituloArtigo)
+        console.table(...tituloArtigo)
+        console.table([...tituloArtigo])
+
+        //Arrays
+        let listaCursos1 = ["NodeJS e MongoDB", "ES6 e TypeScript", "Angular 4"]
+        let listaCursos2 = ["Multiplataforma Android/IOS", "Introdução ao GNU/Linux"]
+        let listaCursosCompleta = ["Web Completo", "Android Completo", ...listaCursos1, ...listaCursos2]
+
+        console.table(listaCursosCompleta)
+
+        //Objetos
+
+        let Pessoa = {nome: "Diego", idade: 19}
+        let clone = {endereco: "Rua abc 315", ...Pessoa}
+
+        console.table(clone)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Spread</h1>
+
+</body>
+
+</html>
